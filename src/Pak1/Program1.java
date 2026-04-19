@@ -39,7 +39,11 @@ public class Program1 {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 	
-		
+		driver.findElement(By.id("name")).sendKeys("Rahul");
+        driver.findElement(By.id("alertbtn")).click();
+        System.out.println(driver.switchTo().alert().getText());
+        driver.switchTo().alert().accept();
+        
 		
 		
 	}
